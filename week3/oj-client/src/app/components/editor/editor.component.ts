@@ -82,12 +82,12 @@ int main(){
     //registering cursor change event callback function
     this.editor.getSession().getSelection().on('changeCursor', () => {
       let cursor = this.editor.getSession().getSelection().getCursor();
-      console.log('Cursor chage: '+ JSON.stringify(cursor));
+      // console.log('Cursor chage: '+ JSON.stringify(cursor));
 
-      // this.collaboration.cursorMove(JSON.stringify(cursor));
+      this.collaboration.cursorMove(JSON.stringify(cursor));
     });
 
-    // this.collaboration.restoreBuffer();
+    this.collaboration.restoreBuffer();
   }
 
   submit(){
