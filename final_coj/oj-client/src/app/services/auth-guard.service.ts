@@ -11,13 +11,14 @@ export class AuthGuardService implements CanActivate{
               private router: Router) { }
 
   canActivate(): boolean {
-    if (this.auth.isAuthenticated()) {
-      return true;
-    } else {
-      this.router.navigate(['/']);
-      console.log('you need to log in first');
-      return false;
-    }
+    return true;
+    // if (this.auth.isAuthenticated()) {
+    //   return true;
+    // } else {
+    //   this.router.navigate(['/']);
+    //   console.log('you need to log in first');
+    //   return false;
+    // }
   }
 
 //   isAdmin(): boolean {
